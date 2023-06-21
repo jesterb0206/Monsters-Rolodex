@@ -1,6 +1,19 @@
 import './search-box.styles.css';
 
-const SearchBox = ({className, placeholder, onChangeHandler}) => (
+interface ISearchBoxProps {
+  className: string;
+  placeholder?: string;
+}
+
+interface ISearchBoxProps {
+  onChangeHandler: (a: string) => void;
+}
+
+const SearchBox = ({
+  className,
+  placeholder,
+  onChangeHandler,
+}: ISearchBoxProps) => (
   <input
     className={`search-box ${className}`}
     type='search'
